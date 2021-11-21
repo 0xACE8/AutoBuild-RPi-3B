@@ -21,17 +21,6 @@ on:
 #  schedule:
 #    - cron:  0 1 9,18,27 * *  
 
-name: Raspberry Pi3B+
-
-on:
-  repository_dispatch:
-  workflow_dispatch:
-    inputs:
-      ssh:
-        description: 'SSH connection to Actions'
-        required: false
-        default: 'false'
-
 env:
   OPNAME: 'Raspberry Pi3B+'
   REPO_URL: https://github.com/coolsnowwolf/lede
