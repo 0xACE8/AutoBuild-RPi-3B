@@ -22,24 +22,24 @@ mkdir package/community
 pushd package/community
 
 # Add luci-app-bypass
-git clone --depth=1 https://github.com/garypang13/luci-app-bypass
-git clone --depth=1 https://github.com/garypang13/smartdns-le
+#git clone --depth=1 https://github.com/garypang13/luci-app-bypass
+#git clone --depth=1 https://github.com/garypang13/smartdns-le
 
 # Add luci-app-godproxy
-git clone --depth=1 https://github.com/project-lede/luci-app-godproxy
+#git clone --depth=1 https://github.com/project-lede/luci-app-godproxy
 
 # Add luci-app-modeminfo
-git clone --depth=1 https://github.com/koshev-msk/luci-app-modeminfo
+#git clone --depth=1 https://github.com/koshev-msk/luci-app-modeminfo
 
 # Add luci-app-tcpdump
 git clone --depth=1 https://github.com/KFERMercer/luci-app-tcpdump
 
 # Add luci-app-oaf
-git clone --depth=1 https://github.com/destan19/OpenAppFilter -b oaf-3.0.1
+#git clone --depth=1 https://github.com/destan19/OpenAppFilter -b oaf-3.0.1
 
 # Add luci-theme-argon_armygreen
-git clone --depth=1 https://github.com/XXKDB/luci-theme-argon_armygreen
-popd
+#git clone --depth=1 https://github.com/XXKDB/luci-theme-argon_armygreen
+#popd
 
 # Fix mt76 wireless driver
 pushd package/kernel/mt76
