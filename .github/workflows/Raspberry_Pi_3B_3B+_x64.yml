@@ -127,6 +127,26 @@ jobs:
           cd $OPENWRT_ROOT_PATH
           ./scripts/feeds update -a
           ./scripts/feeds install -a
+          
+          
+      - name: 导入第三方插件
+        working-directory: ./openwrt
+        run: |
+          git clone https://github.com/kenzok8/openwrt-packages.git package/openwrt-packages
+          git clone https://github.com/kenzok8/small.git package/small
+          git clone https://github.com/kenzok8/small-package package/small-package
+          git clone https://github.com/fw876/helloworld.git package/helloworld
+          git clone https://github.com/xiaorouji/openwrt-passwall package/openwrt-passwall
+          git clone https://github.com/jlzsss/dnscrypt-proxy2.git package/dnscrypt-proxy2
+ 
+  
+      - name: argon_new主题
+        working-directory: ./openwrt
+        run: |
+          cd package/lean
+          rm -rf luci-theme-argon
+          git clone -b master https://github.com/jerrykuku/luci-theme-argon.git          
+          
 
       - name: Compile Tools
         if: steps.hash.outputs.REBUILD_TOOLCHAIN == 'true'
